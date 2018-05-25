@@ -28,57 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Editarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeArticuulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Guardarbutton
+            // menuStrip1
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(63, 335);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Guardarbutton.TabIndex = 0;
-            this.Guardarbutton.Text = "GUARDAR";
-            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.registroToolStripMenuItem,
+            this.consultaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // Editarbutton
+            // archivoToolStripMenuItem
             // 
-            this.Editarbutton.Location = new System.Drawing.Point(174, 335);
-            this.Editarbutton.Name = "Editarbutton";
-            this.Editarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Editarbutton.TabIndex = 1;
-            this.Editarbutton.Text = "EDITAR";
-            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
             // 
-            // Eliminarbutton
+            // registroToolStripMenuItem
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(305, 335);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Eliminarbutton.TabIndex = 2;
-            this.Eliminarbutton.Text = "ELIMINAR";
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registroDeArticuulosToolStripMenuItem});
+            this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.registroToolStripMenuItem.Text = "Registro";
+            // 
+            // registroDeArticuulosToolStripMenuItem
+            // 
+            this.registroDeArticuulosToolStripMenuItem.Name = "registroDeArticuulosToolStripMenuItem";
+            this.registroDeArticuulosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registroDeArticuulosToolStripMenuItem.Text = "Registro De Articuulos";
+            this.registroDeArticuulosToolStripMenuItem.Click += new System.EventHandler(this.registroDeArticuulosToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.consultaToolStripMenuItem.Text = "Consulta";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Eliminarbutton);
-            this.Controls.Add(this.Editarbutton);
-            this.Controls.Add(this.Guardarbutton);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "MainForm";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Guardarbutton;
-        private System.Windows.Forms.Button Editarbutton;
-        private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeArticuulosToolStripMenuItem;
     }
 }
 
