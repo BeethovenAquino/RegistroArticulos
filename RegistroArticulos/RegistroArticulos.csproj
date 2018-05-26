@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\ConsultaDeArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaDeArticulos.Designer.cs">
+      <DependentUpon>ConsultaDeArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RegistroDeArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\ConsultaDeArticulos.resx">
+      <DependentUpon>ConsultaDeArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroDeArticulos.resx">
       <DependentUpon>RegistroDeArticulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,11 +105,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UI\Consultas\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\Scrips.sql" />
+    <None Include="Resources\Fondo.jpg" />
+    <None Include="Resources\new_32.png" />
+    <None Include="Resources\borrar_32.png" />
+    <None Include="Resources\save_32.png" />
+    <None Include="Resources\buscar.png" />
     <None Include="Resources\7.jpg" />
     <None Include="Resources\8.jpg" />
   </ItemGroup>

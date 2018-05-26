@@ -1,4 +1,5 @@
-﻿using RegistroArticulos.UI.Registros;
+﻿using RegistroArticulos.UI.Consultas;
+using RegistroArticulos.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,12 @@ namespace RegistroArticulos
         {
             RegistroDeArticulos a = new RegistroDeArticulos();
             a.Show();
+        }
+
+        private void consultaDeArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaDeArticulos c = new ConsultaDeArticulos();
+            c.Show();
         }
     }
 }

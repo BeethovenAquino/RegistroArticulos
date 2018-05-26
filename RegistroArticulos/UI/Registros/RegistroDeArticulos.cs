@@ -16,6 +16,10 @@ namespace RegistroArticulos.UI.Registros
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Aqui completamos la clase articulo
+        /// </summary>
+        /// <returns></returns>
 
         private Articulo LlenaClase()
         {
@@ -30,6 +34,11 @@ namespace RegistroArticulos.UI.Registros
             return Articulos;
         }
 
+        /// <summary>
+        /// Aqui Validamos los campos 
+        /// </summary>
+        /// <param name="error"></param>
+        /// <returns></returns>
         public bool Validar(int error)
         {
             bool paso = false;
@@ -61,6 +70,12 @@ namespace RegistroArticulos.UI.Registros
             }
             return paso;
         }
+        /// <summary>
+        /// Aqui tenemos el Button Guardar la cual guardamos lo que esta en los campos y llamamos la funcion validar para validar
+        /// nuestros campos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
@@ -71,14 +86,14 @@ namespace RegistroArticulos.UI.Registros
             }
             else
             {
-                Articulo Libros = LlenaClase();
+                Articulo articulo = LlenaClase();
 
                 bool paso = false;
 
 
                 if (ArticuloIDnumericUpDown.Value == 0)
                 {
-                    paso = BLL.ArticulosBLL.Guardar(LlenaClase());
+                    paso = BLL.ArticulosBLL.Guardar(articulo);
 
                 }
                 else
@@ -105,6 +120,12 @@ namespace RegistroArticulos.UI.Registros
 
             }
         }
+
+        /// <summary>
+        /// El Botton Eliminar la cual llama la funcion Validar para ver si el ID esta vacio o contiene un numero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
@@ -138,6 +159,12 @@ namespace RegistroArticulos.UI.Registros
             }
         }
 
+        /// <summary>
+        /// Button Buscar que pide ID para ver si esta Creado o no
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(ArticuloIDnumericUpDown.Value);
@@ -161,6 +188,28 @@ namespace RegistroArticulos.UI.Registros
                  MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+        }
+
+        private void RegistroDeArticulos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        ///  El Button Nuevo la cual  nos limpia nuestra Ventana
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            ArticuloIDnumericUpDown.Value = 0;
+            FechaVencimientodateTimePicker.Value = DateTime.Now;
+            DescripciontextBox.Clear();
+            PreciotextBox.Clear();
+            ExistencianumericUpDown.Value = 0;
+            CantidadCotizadanumericUpDown.Value = 0;
+            errorProvider.Clear();
+
         }
     }
 }
